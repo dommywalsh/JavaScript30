@@ -7,6 +7,17 @@
 </head>
 <body>
 <script>
+  const myArray = []
+  const secretCode = 'domwalsh'
+  window.addEventListener('keyup', (e) => {
+    myArray.push(e.key)
+    myArray.splice(-secretCode - 1, myArray.length - secretCode.length)
+    // console.log(myArray)
+    if (myArray.join('').includes(secretCode)){
+      console.log('DING DING');
+      cornify_add()
+    }
+  })
 </script>
 </body>
 </html>
